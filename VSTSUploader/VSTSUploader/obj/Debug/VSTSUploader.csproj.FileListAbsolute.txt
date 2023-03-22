@@ -1,0 +1,11 @@
+C:\Users\sshaik7\Desktop\Demo\VSTSUploader\VSTSUploader\bin\Debug\VSTSUploader.exe.config
+C:\Users\sshaik7\Desktop\Demo\VSTSUploader\VSTSUploader\bin\Debug\VSTSUploader.exe
+C:\Users\sshaik7\Desktop\Demo\VSTSUploader\VSTSUploader\bin\Debug\VSTSUploader.pdb
+C:\Users\sshaik7\Desktop\Demo\VSTSUploader\VSTSUploader\obj\Debug\VSTSUploader.csprojResolveAssemblyReference.cache
+C:\Users\sshaik7\Desktop\Demo\VSTSUploader\VSTSUploader\obj\Debug\VSTSUploader.exe
+C:\Users\sshaik7\Desktop\Demo\VSTSUploader\VSTSUploader\obj\Debug\VSTSUploader.pdb
+C:\Users\sshaik7\Desktop\Demo\VSTSUploader\VSTSUploader\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sshaik7\Desktop\Demo\VSTSUploader\VSTSUploader\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sshaik7\Desktop\ImpactedTests\VSTSUploader\VSTSUploader\bin\Debug\VSTSUploader.exe.config
+C:\Users\sshaik7\Desktop\ImpactedTests\VSTSUploader\VSTSUploader\obj\Debug\VSTSUploader.exe
+C:\Users\sshaik7\Desktop\ImpactedTests\VSTSUploader\VSTSUploader\obj\Debug\VSTSUploader.pdb

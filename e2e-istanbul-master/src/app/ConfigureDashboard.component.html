@@ -1,0 +1,93 @@
+<h1>Devops Projects Configuration</h1>
+
+<input type="button" value="Add" class="btn btn-default" (click)="addEmp()" />
+<div >
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Project Name</td>
+                <td>Display Name</td>
+                <td>URL</td>
+                <td>PAT</td>
+                <td>PAT Expiry Date</td>               
+                <td>Test Plan ID</td>
+                <td>Test Suite ID</td>
+                <td>Build Definition ID</td>
+                <td>Release Definition ID</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+ 
+            <tr *ngFor="let proj of projects;let i=idx">
+                <ng-template [ngTemplateOutlet]="loadTemplate(proj)" [ngOutletContext]="{ $implicit: proj, idx: i }"></ng-template>
+                
+                <!--<div id="{{proj.ID}}" class="text-center">Automation Results by:</div>-->
+            </tr>
+ 
+        </tbody>
+    </table>
+</div>
+<div>{{statusMessage}}</div>
+<ng-template #readOnlyTemplate let-proj>
+    <td>{{proj.ID}}</td>
+    <td>{{proj.ProjectName}}</td>
+    <td>{{proj.DisplayName}}</td>
+    <td>{{proj.URL}}</td>
+    <td>{{proj.PAT}}</td>
+    <td>{{proj.PATExpiryDate}}</td>
+    <td>{{proj.TestPlanID}}</td>
+    <td>{{proj.TestSuiteID}}</td>
+    <td>{{proj.BuildDefinitionID}}</td>
+    <td>{{proj.ReleaseDefinitionID}}</td>
+    
+    <td>
+        <input type="button" value="Edit" class="btn btn-default" (click)="editEmployee(proj)" />
+    </td>
+    <td>
+        <input type="button" value="Delete" (click)="deleteEmp(proj)" class="btn btn-danger" />
+    </td>
+</ng-template>
+<ng-template #editTemplate>
+    <td>
+        <input type="text" value="{{selemp.ID}}" size="1" />
+    </td>
+    <td>
+        <input type="text" value="{{selemp.ProjectName}}" size="10" />
+    </td>
+    <td>
+        <input type="text" value="{{selemp.DisplayName}}" size="10" />
+    </td>
+    <td>
+        <input type="text" value="{{selemp.URL}}" size="10" />
+    </td>
+    <td>
+        <input type="text" value="{{selemp.PAT}}" size="10" />
+    </td>
+    <td>
+        <input type="text" value="{{selemp.PATExpiryDate}}" size="10" />
+    </td>
+    <td>
+        <input type="text" value="{{selemp.TestPlanID}}" size="10" />
+    </td>
+    <td>
+        <input type="text" value="{{selemp.TestSuiteID}}" size="10" />
+    </td>
+    <td>
+        <input type="text" value="{{selemp.BuildDefinitionID}}" size="10" />
+    </td>
+    <td>
+        <input type="text" value="{{selemp.ReleaseDefinitionID}}" size="10" />
+    </td>
+    <td>
+        <input type="button" value="Save" (click)="saveEmp()" class="btn btn-success" />
+    </td>
+    <td>
+        <input type="button" value="Cancel" (click)="cancel()" class="btn btn-warning" />
+    </td>
+ 
+</ng-template>
+
+ 

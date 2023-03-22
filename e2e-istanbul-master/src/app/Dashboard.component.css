@@ -1,0 +1,104 @@
+thead {
+    color: rgb(183, 115, 51);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+span.a {
+    display: inline-block; 
+    width: 480px;
+    height: 270px;
+    padding: 10px;
+    border: 2px solid blue;    
+    text-align:center;
+    font-size:100;
+    color: blue;
+    
+}
+
+span.b {
+    display: inline-block;
+    width: 480px;
+    height: 270px;
+    padding: 15px;
+    border: 1px solid blue;        
+    
+}
+
+span.c {
+    display: inline-block; 
+    width: 480px;
+    height: 270px;
+    padding: 15px;
+    border: 1px solid blue;    
+    
+}
+
+
+div.a {
+    background-color: lightgrey;
+    width: 430px;
+    
+    border: 6px solid green;
+    padding: 10px;
+    margin: 5px;
+    text-align:center;
+}
+
+div.x {
+    
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+.hide{
+
+    visibility: hidden
+    
+    }
+
+    .unhide{
+
+        visibility: visible
+        
+        }
+	
+     pt{
+        text-align: center;
+        }  
+
+        div.red{
+            background-color: lightgrey;
+            width: 430px;
+            border: 6px solid red;
+            padding: 10px;
+            margin: 5px;
+            text-align:center;
+        }
+        div.orange{
+            background-color: lightgrey;
+            width: 430px;
+            border: 6px solid orange;
+            padding: 10px;
+            margin: 5px;
+            text-align:center;
+        }
+
+
+
+
+
+
