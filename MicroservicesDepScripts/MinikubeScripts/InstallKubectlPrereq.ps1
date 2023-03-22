@@ -1,0 +1,1 @@
+choco install Kubernetes-cli -y

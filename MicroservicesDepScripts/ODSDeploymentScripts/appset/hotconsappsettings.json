@@ -1,0 +1,64 @@
+{
+  "Serilog": {
+    "SeqServerUrl": null,
+    "LogstashgUrl": null,
+    "MinimumLevel": {
+      "Default": "Debug",
+      "Override": {
+        "System": "Debug"
+      }
+    },
+    "Enrich": [ "FromLogContext" ],
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "/app/logs/log.json",
+          "formatter": "Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact",
+          "rollingInterval": "Day",
+          "retainedFileCountLimit": 20,
+          "buffered": true,
+		  "rollOnFileSizeLimit": true,
+		  "fileSizeLimitBytes": "100000000"
+        }
+      },
+      {
+        "Name": "Async",
+        "Args": {
+          "configure": [
+            {
+              "Name": "Console",
+              "Args": {
+                "restrictedToMinimumLevel": "Information"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "OutboxWatcher": {
+    "PollingInterval": 200,
+    "Payload": 3000,
+    "CatchUpPayload": 30000,
+    "Mode": "Archive"
+  },
+  "AvocetConfiguration": {
+    "ConfigurationPath": "/app/config",
+    "CommandLineArgs": "/appid=AvoHot /username=system /password=manager"
+  },
+  "FileEventStorage": {
+    "FolderPath": "/app/Events"
+  },
+  "Redis": {
+    "ConnectionString": "avocet-cache"
+  },
+  "Kafka": {
+    "BootstrapServers": "kafka:29092",
+    "ConsumerGroup": "avocet-hotcons-group"
+  },
+  "SetupConfig": {
+    "MaxBatchSize": "5000",
+    "MaxBatchCount": "10"
+  }
+}
